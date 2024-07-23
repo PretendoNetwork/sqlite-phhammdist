@@ -42,8 +42,8 @@ static void phhammdist(sqlite3_context *context, int argc, sqlite3_value **argv)
         const char *phBlob2 = sqlite3_value_blob(argv[1]);
         char *ptr = NULL;
 
-        UINT_ph1 = strtoul(phBlob1, &ptr, 10);
-        UINT_ph2 = strtoul(phBlob2, &ptr, 10);
+        UINT_ph1 = strtoul(phBlob1, &ptr, 2);
+        UINT_ph2 = strtoul(phBlob2, &ptr, 2);
     } else if (datatype_arg1 == SQLITE_INTEGER && datatype_arg2 == SQLITE_INTEGER) {
 
         // SQLITE stores SIGNED 64bit INTS (-7726118085807353866)
